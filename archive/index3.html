@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basketball 2025</title>
+  <link rel="icon" href="data:," />
+
+  <!-- ✅ Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D4E7GK0BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1D4E7GK0BD');
+  </script>
+
+  <!-- ✅ Video.js -->
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #14213d;
+      color: white;
+      border-bottom: 5px solid #007bff;
+    }
+    header h1 { margin: 0; font-size: 2.3rem; }
+    header p { margin: 5px 0 0; opacity: 0.9; }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section { margin-bottom: 60px; }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: #14213d;
+    }
+
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .video-card.coming-soon {
+      opacity: 0.55;
+      pointer-events: none;
+      filter: grayscale(90%);
+    }
+
+    .video-title {
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 1.1em;
+      background: #14213d;
+      color: white;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .download-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .download-btn:hover { background: #0056b3; }
+
+    .video-js {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+
+    .vjs-control-bar {
+      background: rgba(43, 51, 63, 0.9) !important;
+    }
+
+    .video-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-wrapper.zoomed video {
+      transform: scale(1.5);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    footer {
+      background: #14213d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-top: 5px solid #007bff;
+      margin-top: auto;
+    }
+
+    footer a { color: #00b4ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Basketball 2025</h1>
+    <p>• Game Replays •</p>
+  </header>
+
+  <main>
+    <section id="welcome">
+      <h2>Welcome!</h2>
+      <p>
+        Welcome to the Basketball 2025 Replay Hub!  
+        Watch replays of Lillyan's and Ivan's games below.  
+        Watch live games at <a href="https://live.fedupadventures.com" target="_blank">live.fedupadventures.com</a>.  
+        Replays are usually posted by the next day in case you miss the live stream!
+      </p>
+    </section>
+
+    <section id="daughter">
+      <h2>Middleton Lady Vikes Basketball</h2>
+      <div class="gallery">
+        <div class="video-card">
+          <h3 class="video-title">
+            Middleton @ TVCS (10/27)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game3" class="video-js vjs-default-skin" controls preload="metadata" data-setup='{}' poster="img/10272025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Vallivue @ Middleton (10/22)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game2" class="video-js vjs-default-skin" controls preload="metadata" data-setup='{}' poster="img/10222025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Sage Valley @ Middleton (10/20)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game1" class="video-js vjs-default-skin" controls preload="metadata" data-setup='{}' poster="img/10202025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="son">
+      <h2>Middleton Longhorns Boys Basketball</h2>
+      <div class="gallery">
+        <div class="video-card coming-soon">
+          <h3 class="video-title">
+            Coming Soon: Longhorns vs Broncos (10/29)
+            <a href="#" class="download-btn" disabled>Coming Soon</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="boys2" class="video-js vjs-default-skin" controls preload="metadata" data-setup='{}' poster="basketball-thumbnail.jpg">
+              <source src="#" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Fed Up Adventures | Built by <a href="https://fedupadventures.com" target="_blank">Fed Up Consultants</a></p>
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const ids = ["game1", "game2", "game3", "boys2"];
+    const Btn = videojs.getComponent("Button");
+
+    // Custom buttons
+    class ZoomInButton extends Btn {
+      constructor() { super(...arguments); this.el().innerHTML = "🔍+"; }
+      handleClick() {
+        const w = this.player_.el().closest(".video-wrapper");
+        let z = parseFloat(w.dataset.zoom || "1");
+        z = Math.min(z + 0.25, 2.5);
+        w.dataset.zoom = z;
+        w.querySelector("video").style.transform = `scale(${z})`;
+      }
+    }
+    class ZoomOutButton extends Btn {
+      constructor() { super(...arguments); this.el().innerHTML = "🔍−"; }
+      handleClick() {
+        const w = this.player_.el().closest(".video-wrapper");
+        let z = parseFloat(w.dataset.zoom || "1");
+        z = Math.max(z - 0.25, 1);
+        w.dataset.zoom = z;
+        w.querySelector("video").style.transform = `scale(${z})`;
+      }
+    }
+    class SlowMoButton extends Btn {
+      constructor() { super(...arguments); this.slow = false; this.el().innerHTML = "🐢"; }
+      handleClick() {
+        this.slow = !this.slow;
+        this.player_.playbackRate(this.slow ? 0.5 : 1);
+        this.el().innerHTML = this.slow ? "🐇" : "🐢";
+      }
+    }
+
+    videojs.registerComponent("ZoomInButton", ZoomInButton);
+    videojs.registerComponent("ZoomOutButton", ZoomOutButton);
+    videojs.registerComponent("SlowMoButton", SlowMoButton);
+
+    // Initialize
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const player = videojs(id, {
+        fluid: true,
+        responsive: true,
+        playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 2]
+      });
+
+      player.ready(() => {
+        const cb = player.getChild("controlBar");
+        cb.addChild("ZoomInButton", {}, cb.children_.length - 1);
+        cb.addChild("ZoomOutButton", {}, cb.children_.length - 1);
+        cb.addChild("SlowMoButton", {}, cb.children_.length - 1);
+
+        // ✅ GA tracking
+        player.on("play", () => gtag("event", "video_play", {event_category: "Videos", event_label: id}));
+        player.on("pause", () => gtag("event", "video_pause", {event_category: "Videos", event_label: id, event_value: Math.round(player.currentTime())}));
+        player.on("ended", () => gtag("event", "video_complete", {event_category: "Videos", event_label: id, event_value: Math.round(player.duration())}));
+      });
+    });
+
+    // ✅ Download tracking
+    document.querySelectorAll("a[download]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        gtag("event", "download", {
+          event_category: "Downloads",
+          event_label: btn.href
+        });
+      });
+    });
+  });
+  </script>
+</body>
+</html>

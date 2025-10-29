@@ -1,0 +1,146 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #14213d;
+  color: white;
+  border-bottom: 5px solid #007bff;
+}
+header h1 { margin: 0; font-size: 2.3rem; }
+header p { margin: 5px 0 0; opacity: 0.9; }
+
+/* Next Game Banner */
+.next-game-banner {
+  background: #EBC400;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.next-game-banner2 {
+  background: #CC5500;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section { margin-bottom: 60px; }
+section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #14213d;
+}
+section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Cards */
+.video-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.video-card.coming-soon {
+  opacity: 0.55;
+  pointer-events: none;
+  filter: grayscale(90%);
+}
+
+.video-title {
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 1.1em;
+  background: #14213d;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.download-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.download-btn:hover { background: #0056b3; }
+
+/* Videos */
+.video-js {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+.vjs-control-bar {
+  background: rgba(43, 51, 63, 0.9) !important;
+}
+.video-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.video-wrapper.zoomed video {
+  transform: scale(1.5);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Footer */
+footer {
+  background: #14213d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 5px solid #007bff;
+  margin-top: auto;
+}
+footer a { color: #00b4ff; text-decoration: none; }
+footer a:hover { text-decoration: underline; }

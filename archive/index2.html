@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basketball 2025</title>
+  <link rel="icon" href="data:," />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D4E7GK0BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-1D4E7GK0BD");
+  </script>
+  
+  <!-- Video.js -->
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
+  <!-- Zoom Plugin -->
+  <script src="https://cdn.jsdelivr.net/gh/theonlyducks/videojs-zoom@master/dist/videojs-zoom.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/theonlyducks/videojs-zoom@master/dist/videojs-zoom.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Basketball 2025</h1>
+    <p>• Game Replays •</p>
+  </header>
+
+  <div class="gallery">
+    <div class="card">
+      <div class="video-frame">
+        <video
+          id="game1"
+          class="video-js vjs-default-skin vjs-big-play-centered"
+          controls
+          preload="auto"
+          playsinline
+          width="100%"
+          height="100%"
+          poster="img/10202025_thumbnail.png"
+          data-setup='{"playbackRates":[0.5,0.75,1,1.25,1.5,2]}'>
+          <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="info">
+        <span>Sage Valley @ Middleton (10/20)</span>
+        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" download>Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+       <div class="video-frame">
+        <video
+          id="game2"
+          class="video-js vjs-default-skin vjs-big-play-centered"
+          controls
+          preload="auto"
+          playsinline
+          width="100%"
+          height="100%"
+          poster="img/10222025_thumbnail.png"
+          data-setup='{"playbackRates":[0.5,0.75,1,1.25,1.5,2]}'>
+          <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="info">
+        <span>Vallivue @ Middleton (10/22)</span>
+        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" download>Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-frame">
+        <video
+          id="game3"
+          class="video-js vjs-default-skin vjs-big-play-centered"
+          controls
+          preload="auto"
+          playsinline
+          width="100%"
+          height="100%"
+          poster="img/10272025_thumbnail.png"
+          data-setup='{"playbackRates":[0.5,0.75,1,1.25,1.5,2]}'>
+          <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="info">
+        <span>Middleton @ TVCS (10/27)</span>
+        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Fed Up Adventures | Built by <a href="https://fedupadventures.com" target="_blank">Fed Up Consultants</a></p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const ids = ["game1", "game2", "game3"];
+
+      const players = ids.map(id => {
+        const el = document.getElementById(id);
+        if (!el) return null;
+
+        const player = videojs(id, {
+          controlBar: {
+            pictureInPictureToggle: true,
+            fullscreenToggle: true,
+            remainingTimeDisplay: true
+          }
+        });
+
+        // ✅ Initialize zoom plugin safely
+        if (player.zoomPlugin) {
+          player.zoomPlugin({
+            showZoom: true,
+            showMove: true,
+            showRotate: false,
+            zoomMax: 4,
+            zoomMin: 1
+          });
+        }
+
+        // ✅ Google Analytics events
+        player.on("play", () =>
+          gtag("event", "video_play", { event_category: "Videos", event_label: id })
+        );
+        player.on("pause", () =>
+          gtag("event", "video_pause", {
+            event_category: "Videos",
+            event_label: id,
+            event_value: Math.round(player.currentTime())
+          })
+        );
+        player.on("ended", () =>
+          gtag("event", "video_complete", {
+            event_category: "Videos",
+            event_label: id,
+            event_value: Math.round(player.duration())
+          })
+        );
+
+        // ✅ Wait for the player to be fully ready before injecting controls
+        player.ready(() => {
+          const cb = player.getChild("controlBar");
+          if (!cb) return;
+
+          // Frame-by-frame step
+          const frameTime = 1 / 30;
+          const backButton = player.controlBar.addChild("button", {});
+          backButton.addClass("vjs-control vjs-button");
+          backButton.controlText("Previous Frame");
+          backButton.el().innerHTML = "⏪";
+          backButton.el().onclick = () => {
+            player.pause();
+            player.currentTime(Math.max(player.currentTime() - frameTime, 0));
+          };
+
+          const fwdButton = player.controlBar.addChild("button", {});
+          fwdButton.addClass("vjs-control vjs-button");
+          fwdButton.controlText("Next Frame");
+          fwdButton.el().innerHTML = "⏩";
+          fwdButton.el().onclick = () => {
+            player.pause();
+            player.currentTime(Math.min(player.currentTime() + frameTime, player.duration()));
+          };
+
+          // Slow-motion toggle
+          const slowButton = player.controlBar.addChild("button", {});
+          slowButton.addClass("vjs-control vjs-button");
+          slowButton.controlText("Toggle Slow Motion");
+          slowButton.el().innerHTML = "🐢";
+          let slow = false;
+          slowButton.el().onclick = () => {
+            slow = !slow;
+            player.playbackRate(slow ? 0.25 : 1);
+            slowButton.el().innerHTML = slow ? "🐇" : "🐢";
+          };
+
+          // ✅ Insert new buttons near fullscreen toggle to avoid crowding play button
+          const fs = cb.getChild("fullscreenToggle");
+          if (fs) {
+            cb.el().insertBefore(backButton.el(), fs.el());
+            cb.el().insertBefore(slowButton.el(), fs.el());
+            cb.el().insertBefore(fwdButton.el(), fs.el());
+          }
+        });
+
+        return player;
+      }).filter(Boolean);
+
+      // ✅ Download tracking
+      document.querySelectorAll("a[download]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          gtag("event", "download", {
+            event_category: "Downloads",
+            event_label: btn.href
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

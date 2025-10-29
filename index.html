@@ -2,207 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Basketball 2025</title>
+  <link rel="icon" href="data:," />
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1D4E7GK0BD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- ✅ Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D4E7GK0BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1D4E7GK0BD');
+  </script>
 
-  gtag('config', 'G-1D4E7GK0BD');
-</script>
+  <!-- ✅ Video.js -->
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #222;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #14213d;
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .card video {
-      width: 100%;
-      cursor: pointer;
-      background: black;
-    }
-    .info {
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    button, a.btn {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    button:hover, a.btn:hover {
-      background: #0056b3;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal video {
-      width: 90%;
-      max-width: 1200px;
-      max-height: 90%;
-    }
-    footer {
-      background: #14213d;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      border-top: 5px solid #007bff;
-    }
-    footer a {
-      color: #00b4ff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <!-- ✅ External Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- ✅ Basic password protection -->
-  <!-- <script>
-    const password = prompt("Enter password to view videos:");
-    if (password !== "football2025") {
-      document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px;'>Access denied</h2>";
-      throw "Access denied";
-    }
-  </script> -->
-
   <header>
     <h1>Basketball 2025</h1>
-    <p>Game Replays • 4K Streaming</p>
+    <p>• Game Replays •</p>
   </header>
 
-  <div class="gallery">
-    <!-- ✅ Game 1 -->
-    <div class="card">
-      <video
-        src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4"
-        poster="basketball-thumbnail.jpg"
-        onclick="openModal(this.src)"
-        muted
-      ></video>
-      <div class="info">
-        <span>Sage Valley @ Middleton (10/20)</span>
-        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" download>Download</a>
+  
+  
+
+  <main>
+    <!-- Welcome Section -->
+    <section id="welcome">
+      <h2>Welcome!</h2>
+      <p>
+        Welcome to the Basketball 2025 Replay Hub!  
+        Watch replays of Lillyan's and Ivan's games below.  
+        Watch live games at <a href="https://live.fedupadventures.com" target="_blank">live.fedupadventures.com</a>.  
+        Live streams are only on during the game. Replays are usually posted by the next day in case you miss the live stream!
+      </p>
+    </section>
+
+    <!-- 🏀 Next Game Banner -->
+    <section class="next-game-banner">
+        <p>🎯 <strong>Next Game:</strong> Lady Vikes vs Cougars • Nov 6th @ 4:15 PM</p>
+    </section>
+
+    <!-- Daughter’s Games -->
+    <section id="daughter">
+      <h2>Middleton Lady Vikes Basketball</h2>
+      <div class="gallery">
+        <div class="video-card">
+          <h3 class="video-title">
+            Middleton @ TVCS (10/27)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game3" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/10272025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Vallivue @ Middleton (10/22)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game2" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/10222025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Sage Valley @ Middleton (10/20)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game1" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/10202025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ✅ Game 2 -->
-    <div class="card">
-      <video
-        src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4
-"
-        poster="basketball-thumbnail.jpg"
-        onclick="openModal(this.src)"
-        muted
-      ></video>
-      <div class="info">
-        <span>Vallivue @ Middleton (10/22)</span>
-        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4
-" download>Download</a>
+    <!-- Son’s Games -->
+    <!-- 🏀 Next Game Banner -->
+    <section class="next-game-banner2">
+        <p>🎯 <strong>Next Game:</strong> Longhorns vs Broncos • Wed. Oct 29th @ 7:30 PM</p>
+    </section>
+
+    <section id="son">
+      <h2>Middleton Longhorns Boys Basketball</h2>
+      <div class="gallery">
+        <div class="video-card coming-soon">
+          <h3 class="video-title">
+            Coming Soon: Longhorns vs Broncos (10/29)
+            <a href="#" class="download-btn" disabled>Coming Soon</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="boys2" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/basketball-thumbnail.jpg">
+              <source src="#" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <!-- ✅ Game 3 -->
-    <!-- <div class="card">
-      <video
-        src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/Game3.mp4"
-        poster="thumbnail3.jpg"
-        onclick="openModal(this.src)"
-        muted
-      ></video>
-      <div class="info">
-        <span>Game 3</span>
-        <a class="btn" href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/Game3.mp4" download>Download</a>
-      </div>
-    </div> -->
-  </div>
-
-  <!-- ✅ Modal -->
-  <div class="modal" id="modal" onclick="closeModal()">
-    <video id="modalVideo" controls></video>
-  </div>
-
-    <footer>
-    <p>© 2025 Fedup Adventures | Built by <a href="https://fedupadventures.com" target="_blank">FedUp Consultants</a></p>
+  <footer>
+    <p>© 2025 Fed Up Adventures | Built by <a href="https://fedupadventures.com" target="_blank">Fed Up Consultants</a></p>
   </footer>
 
-  <script>
-    function openModal(src) {
-      const modal = document.getElementById('modal');
-      const video = document.getElementById('modalVideo');
-      video.src = src;
-      modal.style.display = 'flex';
-      video.play();
-
-      // Track play event in GA
-      gtag('event', 'video_play', {
-        'event_category': 'Videos',
-        'event_label': src
-      });
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('modal');
-      const video = document.getElementById('modalVideo');
-      video.pause();
-      video.src = "";
-      modal.style.display = 'none';
-    }
-
-    // Track downloads
-    document.querySelectorAll('a[download]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        gtag('event', 'download', {
-          'event_category': 'Downloads',
-          'event_label': btn.href
-        });
-      });
-    });
-  </script>
+  <!-- ✅ External Script -->
+  <script src="js/main.js"></script>
 </body>
 </html>
