@@ -37,6 +37,10 @@ header p { margin: 5px 0 0; opacity: 0.9; }
   font-size: 1.1rem;
 }
 
+.next-game-banner2 p {
+  color: white;
+} 
+
 /* Main Content */
 main {
   flex: 1;
