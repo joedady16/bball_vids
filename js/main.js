@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const ids = ["game1", "game2", "game3", "game4", "game5", "game6", "boys1", "boys2", "boys3", "boys4"];
+  const ids = ["game1", "game2", "game3", "game4", "game5", "game6", "game7", "boys1", "boys2", "boys3", "boys4"];
   const Btn = videojs.getComponent("Button");
 
   class ZoomInButton extends Btn {
