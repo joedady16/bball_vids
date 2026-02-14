@@ -114,6 +114,24 @@ section p {
   align-items: center;
 }
 
+.video-card.is-extra { display: none; }
+
+.gallery.show-all .video-card.is-extra { display: flex; }
+
+.toggle-more {
+  margin: 16px auto 0;
+  display: block;
+  background: #14213d;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.toggle-more:hover { filter: brightness(1.1); }
+
+
 /* Buttons */
 .download-btn {
   background: #007bff;

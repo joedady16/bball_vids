@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ids = [
     "game1", "game2", "game3", "game4", "game5", "game6", "game7",
+    "game8", "game9", "game10",
      "boys1", "boys2", "boys3", "boys4", "vball1", "vball2", "vball3"
     ];
   const Btn = videojs.getComponent("Button");
@@ -81,4 +82,29 @@ document.addEventListener("DOMContentLoaded", () => {
       gtag("event", "download", { event_category: team, event_label: btn.href });
     });
   });
+
+document.querySelectorAll(".toggle-more").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const gallery = document.querySelector(btn.dataset.target);
+    if (!gallery) return;
+
+    const isExpanded = gallery.classList.toggle("show-all");
+    btn.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    btn.textContent = isExpanded ? "Show fewer games" : "Show more games";
+
+    // Optional GA event
+    if (typeof gtag === "function") {
+      gtag("event", "toggle_games", {
+        event_category: "UI",
+        event_label: btn.dataset.target,
+        event_value: isExpanded ? 1 : 0
+      });
+    }
+  });
 });
+
+
+});
+
+
+

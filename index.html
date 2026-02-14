@@ -40,7 +40,7 @@
         Live streams are only on during the game. Replays are usually posted a day or so later, in case you missed the live stream!
       </p>
     </section>
-
+    <hr>
     <!-- 🏐 Next Game Banner  -->
     <section class="next-game-banner3">
         <p>🏐 <strong>Next Game: </strong> Feb. 19, 2026, 8:00PM MST</p>
@@ -49,7 +49,7 @@
 
     <section class="lil_volleyball">
       <h2>Middleton Volleyball</h2>
-      <div class="gallery">
+      <div class="gallery" id="vball_gallery">
 
         <!-- <div class="video-card coming-soon">
           <h3 class="video-title">
@@ -89,8 +89,13 @@
             </video>
           </div>
         </div>
-    </section>
+        
 
+    </section>
+    <!-- <button class="toggle-more" data-target="#vball_gallery" aria-expanded="false">
+      Show more games
+    </button> -->
+    <hr>
     <!-- 🏀 🎯Next Game Banner  -->
     <section class="next-game-banner">
         <!-- <p>🏀 <strong>Middleton Lady Vikes Basketball 2025</strong></p> -->
@@ -101,7 +106,7 @@
     <section id="daughter">
 
       <h2>Middleton Lady Vikes Basketball</h2>
-      <div class="gallery">
+      <div class="gallery" id="lil_bball">
 
         <!-- <div class="video-card coming-soon">
           <h3 class="video-title">
@@ -118,6 +123,45 @@
 
         <div class="video-card">
           <h3 class="video-title">
+            Emmett @ Middleton (12/3)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/basketball/12.03.2025_vs_emmett.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game10" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/12032025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/basketball/12.03.2025_vs_emmett.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Middleton @ Mountain Home (12/1)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/basketball/12.01.2025-vs-mtnhome.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game9" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/12012025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/basketball/12.01.2025-vs-mtnhome.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <h3 class="video-title">
+            Lone Star @ Middleton (11/19)
+            <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/basketball/11.19.2025_vs_LoneStar.mp4" class="download-btn" download>Download</a>
+          </h3>
+          <div class="video-wrapper">
+            <video id="game8" class="video-js vjs-default-skin" controls preload="metadata" loading="lazy"
+              poster="img/11192025_thumbnail.png">
+              <source src="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/11.19.2025_vs_LoneStar.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="video-card is-extra">
+          <h3 class="video-title">
             East Valley @ Middleton (11/13)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/11.13.2025_vs_EastValley.mp4" class="download-btn" download>Download</a>
           </h3>
@@ -129,7 +173,7 @@
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Middleton @ Fremont (11/12)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/11.12.2025_vs_fremont.mp4" class="download-btn" download>Download</a>
@@ -142,7 +186,7 @@
           </div>
         </div>
         
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Kuna @ Middleton (11/10)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/11.10.2025_vs_kuna.mp4" class="download-btn" download>Download</a>
@@ -155,7 +199,7 @@
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Syringa @ Middleton (11/6)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/11.06.2025_vs_Syringa.mp4" class="download-btn" download>Download</a>
@@ -168,7 +212,7 @@
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Middleton @ TVCS (10/27)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-27-2025%20Middleton%20-%20at%20-%20TVCS.mp4" class="download-btn" download>Download</a>
@@ -181,7 +225,7 @@
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Vallivue @ Middleton (10/22)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-22-2025%20Vallivue%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
@@ -194,7 +238,7 @@
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card is-extra">
           <h3 class="video-title">
             Sage Valley @ Middleton (10/20)
             <a href="https://npfootballvids.s3.us-west-2.amazonaws.com/videos/10-20-2025%20Sage%20Valley%20-%20at%20-%20Middleton.mp4" class="download-btn" download>Download</a>
@@ -206,9 +250,16 @@
             </video>
           </div>
         </div>
+
+        
+
         
       </div>
     </section>
+    <button class="toggle-more" data-target="#lil_bball" aria-expanded="false">
+      Show more games
+    </button>
+    <hr>
 
     <!-- Bub’s Games -->
     <!-- 🏀 Next Game Banner -->
