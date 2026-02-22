@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const ids = [
     "game1", "game2", "game3", "game4", "game5", "game6", "game7",
     "game8", "game9", "game10",
-     "boys1", "boys2", "boys3", "boys4", "vball1", "vball2", "vball3"
+     "boys1", "boys2", "boys3", "boys4", 
+     "vball1", "vball2", "vball3", "vball4"
     ];
   const Btn = videojs.getComponent("Button");
 
