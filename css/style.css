@@ -191,6 +191,10 @@ footer a:hover { text-decoration: underline; }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
   main {
     padding: 0;
   }
