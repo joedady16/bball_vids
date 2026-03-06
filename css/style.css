@@ -1,11 +1,16 @@
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f5f7fa;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -191,22 +196,26 @@ footer a:hover { text-decoration: underline; }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  
   main {
     padding: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
   
   .gallery {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 20px;
+    width: 100%;
   }
   
   section:not(.next-game-banner):not(.next-game-banner2):not(.next-game-banner3):not(.next-game-banner4) {
     padding: 20px;
+    width: 100%;
   }
   
   header h1 {
