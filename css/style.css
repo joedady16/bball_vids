@@ -192,12 +192,17 @@ footer a:hover { text-decoration: underline; }
 /* Mobile Responsive */
 @media (max-width: 768px) {
   main {
-    padding: 12px;
+    padding: 0;
   }
   
   .gallery {
     grid-template-columns: 1fr;
     gap: 16px;
+    padding: 20px;
+  }
+  
+  section:not(.next-game-banner):not(.next-game-banner2):not(.next-game-banner3):not(.next-game-banner4) {
+    padding: 20px;
   }
   
   header h1 {
