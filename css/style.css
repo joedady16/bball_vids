@@ -29,7 +29,7 @@ header p { margin: 5px 0 0; opacity: 0.9; }
   font-size: 1.1rem;
 }
 .next-game-banner2 {
-  background: #CC5500;
+  background: #b96c35;
   color: white;
   text-align: center;
   padding: 12px;
@@ -48,6 +48,19 @@ header p { margin: 5px 0 0; opacity: 0.9; }
   padding: 12px;
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.next-game-banner4 {
+  background: #000ecc;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.next-game-banner4 p {
+  color: white;
 }
 
 /* Main Content */
