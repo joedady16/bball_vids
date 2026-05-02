@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
      "boys1", "boys2", "boys3", "boys4", 
      "vball1", "vball2", "vball3", "vball4", "vball5", "vball6",
       "softball1", "softball2", "softball3", "softball4", "softball5", "softball6",
-      "baseball1", "baseball2", "baseball3", "baseball4", "baseball5", "baseball6"
+      "baseball1", "baseball2", "baseball3", "baseball4", "baseball5", "baseball6", "baseball7", "baseball8", "baseball9", "baseball10"
     ];
   const Btn = videojs.getComponent("Button");
 
