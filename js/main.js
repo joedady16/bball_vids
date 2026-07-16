@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "softball2-1", "softball2-2", "softball2-3", "softball2-4", "softball2-5", "softball2-6", 
       "softball2-7", "softball2-8", "softball2-9", "softball2-10", "softball2-11", "softball2-12",
       "baseball2-1", "baseball2-2", "baseball2-3", "baseball2-4", "baseball2-5", "baseball2-6", 
-      "baseball2-7", "baseball2-8", "baseball2-9", "baseball2-10"
+      "baseball2-7", "baseball2-8", "baseball2-9", "baseball2-10", "baseball2-11"
     ];
   const Btn = videojs.getComponent("Button");
 
