@@ -94,6 +94,19 @@ header p { margin: 5px 0 0; opacity: 0.9; }
   color: white;
 }
 
+.next-game-banner7 {
+  background: #01064b;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.next-game-banner7 p {
+  color: white;
+}
+
 /* Main Content */
 main {
   flex: 1;
@@ -239,7 +252,7 @@ footer a:hover { text-decoration: underline; }
     width: 100%;
   }
   
-  section:not(.next-game-banner):not(.next-game-banner2):not(.next-game-banner3):not(.next-game-banner4) {
+  section:not([class*="next-game-banner"]) {
     padding: 20px;
     width: 100%;
   }

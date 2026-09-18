@@ -9,8 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
       "softball2-1", "softball2-2", "softball2-3", "softball2-4", "softball2-5", "softball2-6", 
       "softball2-7", "softball2-8", "softball2-9", "softball2-10", "softball2-11", "softball2-12",
       "baseball2-1", "baseball2-2", "baseball2-3", "baseball2-4", "baseball2-5", "baseball2-6", 
-      "baseball2-7", "baseball2-8", "baseball2-9", "baseball2-10", "baseball2-11"
+      "baseball2-7", "baseball2-8", "baseball2-9", "baseball2-10", "baseball2-11",
+      "volleyball2-1", "volleyball2-2", "volleyball2-3", "volleyball2-4", "volleyball2-5", "volleyball2-6"
     ];
+  // GA event category per sport, based on video id prefix
+  const teamFor = id => {
+    if (!id) return "Other";
+    if (id.startsWith("game")) return "LadyVikes";
+    if (id.startsWith("boys")) return "Longhorns";
+    if (id.startsWith("vball") || id.startsWith("volleyball")) return "Volleyball";
+    if (id.startsWith("softball")) return "Softball";
+    if (id.startsWith("baseball")) return "Baseball";
+    return "Other";
+  };
+
   const Btn = videojs.getComponent("Button");
 
   class ZoomInButton extends Btn {
@@ -74,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cb.addChild("SlowMoButton", {}, cb.children_.length - 1);
 
       // Separate GA Events
-      const team = id.startsWith("game") ? "LadyVikes" : "Longhorns";
+      const team = teamFor(id);
 
       player.on("play", () => gtag("event", "video_play", { event_category: team, event_label: id }));
       player.on("pause", () => gtag("event", "video_pause", { event_category: team, event_label: id, event_value: Math.round(player.currentTime()) }));
@@ -85,7 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Download tracking
   document.querySelectorAll("a[download]").forEach(btn => {
     btn.addEventListener("click", () => {
-      const team = btn.closest("#daughter") ? "LadyVikes" : "Longhorns";
+      const video = btn.closest(".video-card")?.querySelector("video");
+      const team = teamFor(video?.id);
       gtag("event", "download", { event_category: team, event_label: btn.href });
     });
   });
