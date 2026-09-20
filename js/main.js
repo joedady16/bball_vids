@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "softball2-7", "softball2-8", "softball2-9", "softball2-10", "softball2-11", "softball2-12",
       "baseball2-1", "baseball2-2", "baseball2-3", "baseball2-4", "baseball2-5", "baseball2-6", 
       "baseball2-7", "baseball2-8", "baseball2-9", "baseball2-10", "baseball2-11",
-      "volleyball2-1", "volleyball2-2", "volleyball2-3", "volleyball2-4", "volleyball2-5", "volleyball2-6"
+      "volleyball2-1", "volleyball2-2", "volleyball2-3", "volleyball2-4", "volleyball2-5", "volleyball2-6",
+      "football1", "football2", "football3", "football4", "football5", "football6", "football7", "football8", "football9", "football10",
+      "football2-1", "football2-2", "football2-3", "football2-4", "football2-5", "football2-6", "football2-7", "football2-8", "football2-9", "football2-10"
     ];
   // GA event category per sport, based on video id prefix
   const teamFor = id => {
